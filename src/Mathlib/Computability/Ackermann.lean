@@ -72,8 +72,7 @@ theorem ack_succ_zero (m : ℕ) : ack (m + 1) 0 = ack m 1 := by sorry
 @[simp]
 theorem ack_succ_succ (m n : ℕ) : ack (m + 1) (n + 1) = ack m (ack (m + 1) n) := by rw [ack]
 
-@[simp]
-theorem ack_one (n : ℕ) : ack 1 n = n + 2 := by
+@[target, simp] theorem ack_one (n : ℕ) : ack 1 n = n + 2 := by
   induction' n with n IH
   · simp
   · simp [IH]
@@ -84,6 +83,8 @@ theorem ack_two (n : ℕ) : ack 2 n = 2 * n + 3 := by sorry
 @[target, simp]
 theorem ack_three (n : ℕ) : ack 3 n = 2 ^ (n + 3) - 3 := by sorry
 
+@[target]
+
 theorem ack_pos : ∀ m n, 0 < ack m n
   | 0, n => by simp
   | m + 1, 0 => by
@@ -92,6 +93,8 @@ theorem ack_pos : ∀ m n, 0 < ack m n
   | m + 1, n + 1 => by
     rw [ack_succ_succ]
     apply ack_pos
+
+@[target]
 
 theorem one_lt_ack_succ_left : ∀ m n, 1 < ack (m + 1) n
   | 0, n => by simp
@@ -123,6 +126,8 @@ theorem ack_le_iff_right {m n₁ n₂ : ℕ} : ack m n₁ ≤ ack m n₂ ↔ n�
 @[target, simp]
 theorem ack_inj_right {m n₁ n₂ : ℕ} : ack m n₁ = ack m n₂ ↔ n₁ = n₂ := by sorry
 
+@[target]
+
 theorem max_ack_right (m n₁ n₂ : ℕ) : ack m (max n₁ n₂) = max (ack m n₁) (ack m n₂) :=
   (ack_mono_right m).map_max
 
@@ -131,6 +136,8 @@ theorem add_lt_ack : ∀ m n, m + n < ack m n := by sorry
 
 @[target]
 theorem add_add_one_le_ack (m n : ℕ) : m + n + 1 ≤ ack m n := by sorry
+
+@[target]
 
 theorem lt_ack_left (m n : ℕ) : m < ack m n :=
   (self_le_add_right m n).trans_lt <| add_lt_ack m n
@@ -153,8 +160,12 @@ private theorem ack_strict_mono_left' : ∀ {m₁ m₂} (n), m₁ < m₂ → ack
       (ack_strict_mono_left' _ <| (add_lt_add_iff_right 1).1 h).trans
         (ack_strictMono_right _ <| ack_strict_mono_left' n h)
 
+@[target]
+
 theorem ack_strictMono_left (n : ℕ) : StrictMono fun m => ack m n := fun _m₁ _m₂ =>
   ack_strict_mono_left' n
+
+@[target]
 
 theorem ack_mono_left (n : ℕ) : Monotone fun m => ack m n :=
   (ack_strictMono_left n).monotone
@@ -165,8 +176,7 @@ theorem ack_injective_left (n : ℕ) : Function.Injective fun m => ack m n := by
 @[target, simp]
 theorem ack_lt_iff_left {m₁ m₂ n : ℕ} : ack m₁ n < ack m₂ n ↔ m₁ < m₂ := by sorry
 
-@[simp]
-theorem ack_le_iff_left {m₁ m₂ n : ℕ} : ack m₁ n ≤ ack m₂ n ↔ m₁ ≤ m₂ :=
+@[target, simp] theorem ack_le_iff_left {m₁ m₂ n : ℕ} : ack m₁ n ≤ ack m₂ n ↔ m₁ ≤ m₂ :=
   (ack_strictMono_left n).le_iff_le
 
 @[target, simp]
@@ -196,6 +206,8 @@ private theorem sq_le_two_pow_add_one_minus_three (n : ℕ) : n ^ 2 ≤ 2 ^ (n +
       · rw [Nat.pow_succ, Nat.pow_succ]
         linarith [one_le_pow k 2 zero_lt_two]
 
+@[target]
+
 theorem ack_add_one_sq_lt_ack_add_three : ∀ m n, (ack m n + 1) ^ 2 ≤ ack (m + 3) n
   | 0, n => by simpa using sq_le_two_pow_add_one_minus_three (n + 2)
   | m + 1, 0 => by
@@ -208,6 +220,8 @@ theorem ack_add_one_sq_lt_ack_add_three : ∀ m n, (ack m n + 1) ^ 2 ≤ ack (m 
 
 @[target]
 theorem ack_ack_lt_ack_max_add_two (m n k : ℕ) : ack m (ack n k) < ack (max m n + 2) k := by sorry
+
+@[target]
 
 theorem ack_add_one_sq_lt_ack_add_four (m n : ℕ) : ack m ((n + 1) ^ 2) < ack (m + 4) n :=
   calc
@@ -222,6 +236,7 @@ theorem ack_add_one_sq_lt_ack_add_four (m n : ℕ) : ack m ((n + 1) ^ 2) < ack (
 theorem ack_pair_lt (m n k : ℕ) : ack m (pair n k) < ack (m + 4) (max n k) := by sorry
 
 /-- If `f` is primitive recursive, there exists `m` such that `f n < ack m n` for all `n`. -/
+@[target]
 theorem exists_lt_ack_of_nat_primrec {f : ℕ → ℕ} (hf : Nat.Primrec f) :
     ∃ m, ∀ n, f n < ack m n := by
   induction' hf with f g hf hg IHf IHg f g hf hg IHf IHg f g hf hg IHf IHg
@@ -289,14 +304,19 @@ theorem exists_lt_ack_of_nat_primrec {f : ℕ → ℕ} (hf : Nat.Primrec f) :
     -- The proof is now simple.
     exact ⟨max a b + 9, fun n => this.trans_le <| ack_mono_right _ <| unpair_add_le n⟩
 
+@[target]
+
 theorem not_nat_primrec_ack_self : ¬Nat.Primrec fun n => ack n n := fun h => by
   obtain ⟨m, hm⟩ := exists_lt_ack_of_nat_primrec h
   exact (hm m).false
+
+@[target]
 
 theorem not_primrec_ack_self : ¬Primrec fun n => ack n n := by
   rw [Primrec.nat_iff]
   exact not_nat_primrec_ack_self
 
 /-- The Ackermann function is not primitive recursive. -/
+@[target]
 theorem not_primrec₂_ack : ¬Primrec₂ ack := fun h =>
   not_primrec_ack_self <| h.comp Primrec.id Primrec.id

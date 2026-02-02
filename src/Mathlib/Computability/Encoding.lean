@@ -77,6 +77,8 @@ theorem sectionΓ'Bool_inclusionBoolΓ' {b} : sectionΓ'Bool (inclusionBoolΓ' b
 theorem leftInverse_section_inclusion : Function.LeftInverse sectionΓ'Bool inclusionBoolΓ' :=
   fun x => Bool.casesOn x rfl rfl
 
+@[target]
+
 theorem inclusionBoolΓ'_injective : Function.Injective inclusionBoolΓ' :=
   Function.HasLeftInverse.injective ⟨_, (fun _ => sectionΓ'Bool_inclusionBoolΓ')⟩
 
@@ -110,7 +112,7 @@ def decodeNat : List Bool → Nat := fun l => decodeNum l
 @[target]
 theorem encodePosNum_nonempty (n : PosNum) : encodePosNum n ≠ [] := by sorry
 
-@[simp] theorem decode_encodePosNum : ∀ n, decodePosNum (encodePosNum n) = n := by
+@[target, simp] theorem decode_encodePosNum : ∀ n, decodePosNum (encodePosNum n) = n := by
   intro n
   induction' n with m hm m hm <;> unfold encodePosNum decodePosNum
   · rfl
@@ -118,7 +120,7 @@ theorem encodePosNum_nonempty (n : PosNum) : encodePosNum n ≠ [] := by sorry
     exact if_neg (encodePosNum_nonempty m)
   · exact congr_arg PosNum.bit0 hm
 
-@[simp] theorem decode_encodeNum : ∀ n, decodeNum (encodeNum n) = n := by
+@[target, simp] theorem decode_encodeNum : ∀ n, decodeNum (encodeNum n) = n := by
   intro n
   obtain - | n := n <;> unfold encodeNum decodeNum
   · rfl
@@ -126,12 +128,13 @@ theorem encodePosNum_nonempty (n : PosNum) : encodePosNum n ≠ [] := by sorry
   rw [PosNum.cast_to_num]
   exact if_neg (encodePosNum_nonempty n)
 
-@[simp] theorem decode_encodeNat : ∀ n, decodeNat (encodeNat n) = n := by
+@[target, simp] theorem decode_encodeNat : ∀ n, decodeNat (encodeNat n) = n := by
   intro n
   conv_rhs => rw [← Num.to_of_nat n]
   exact congr_arg ((↑) : Num → ℕ) (decode_encodeNum n)
 
 /-- A binary encoding of ℕ in bool. -/
+@[target]
 def encodingNatBool : Encoding ℕ where
   Γ := Bool
   encode := encodeNat
@@ -139,6 +142,7 @@ def encodingNatBool : Encoding ℕ where
   decode_encode n := congr_arg _ (decode_encodeNat n)
 
 /-- A binary fin_encoding of ℕ in bool. -/
+@[target]
 def finEncodingNatBool : FinEncoding ℕ :=
   ⟨encodingNatBool, Bool.fintype⟩
 

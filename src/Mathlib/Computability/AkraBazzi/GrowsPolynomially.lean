@@ -244,6 +244,8 @@ protected lemma neg {f : ℝ → ℝ} (hf : GrowsPolynomially f) : GrowsPolynomi
 protected lemma neg_iff {f : ℝ → ℝ} : GrowsPolynomially f ↔ GrowsPolynomially (-f) :=
   ⟨fun hf => hf.neg, fun hf => by rw [← neg_neg f]; exact hf.neg⟩
 
+@[target]
+
 protected lemma abs (hf : GrowsPolynomially f) : GrowsPolynomially (fun x => |f x|) := by
   cases eventually_atTop_nonneg_or_nonpos hf with
   | inl hf' =>
@@ -259,6 +261,8 @@ protected lemma abs (hf : GrowsPolynomially f) : GrowsPolynomially (fun x => |f 
 
     rw [← iff_eventuallyEq hmain]
     exact hf.neg
+
+@[target]
 
 protected lemma norm (hf : GrowsPolynomially f) : GrowsPolynomially (fun x => ‖f x‖) := by
   simp only [norm_eq_abs]
@@ -499,6 +503,8 @@ lemma growsPolynomially_rpow (p : ℝ) : GrowsPolynomially fun x => x ^ p := by 
 
 @[target]
 lemma growsPolynomially_pow (p : ℕ) : GrowsPolynomially fun x => x ^ p := by sorry
+
+@[target]
 
 lemma growsPolynomially_zpow (p : ℤ) : GrowsPolynomially fun x => x ^ p :=
   (growsPolynomially_id).zpow p (eventually_ge_atTop 0)

@@ -74,6 +74,7 @@ lemma rewrites_of_exists_parts (r : ContextFreeRule T N) (p q : List (Symbol T N
 /-- Rule `r` rewrites string `u` is to string `v` iff they share both a prefix `p` and postfix `q`
 such that the remaining middle part of `u` is the input of `r` and the remaining middle part
 of `u` is the output of `r`. -/
+@[target]
 theorem rewrites_iff :
     r.Rewrites u v ↔ ∃ p q : List (Symbol T N),
       u = p ++ [Symbol.nonterminal r.input] ++ q ∧ v = p ++ r.output ++ q :=
@@ -194,7 +195,7 @@ variable {N : Type*} {r : ContextFreeRule T N} {u v : List (Symbol T N)}
 /-- Rules for a grammar for a reversed language. -/
 def reverse (r : ContextFreeRule T N) : ContextFreeRule T N := ⟨r.input, r.output.reverse⟩
 
-@[simp] lemma reverse_reverse (r : ContextFreeRule T N) : r.reverse.reverse = r := by simp [reverse]
+@[target, simp] lemma reverse_reverse (r : ContextFreeRule T N) : r.reverse.reverse = r := by simp [reverse]
 
 @[simp] lemma reverse_comp_reverse :
     reverse ∘ reverse = (id : ContextFreeRule T N → ContextFreeRule T N) := by ext : 1; simp
@@ -215,10 +216,12 @@ protected lemma Rewrites.reverse : ∀ {u v}, r.Rewrites u v → r.reverse.Rewri
   | _, _, head s => by simpa using .append_left .input_output _
   | _, _, @cons _ _ _ x u v h => by simpa using h.reverse.append_right _
 
+@[target]
+
 lemma rewrites_reverse : r.reverse.Rewrites u.reverse v.reverse ↔ r.Rewrites u v :=
   ⟨fun h ↦ by simpa using h.reverse, .reverse⟩
 
-@[simp] lemma rewrites_reverse_comm : r.reverse.Rewrites u v ↔ r.Rewrites u.reverse v.reverse := by
+@[target, simp] lemma rewrites_reverse_comm : r.reverse.Rewrites u v ↔ r.Rewrites u.reverse v.reverse := by
   rw [← rewrites_reverse, reverse_reverse]
 
 end ContextFreeRule
@@ -227,7 +230,7 @@ namespace ContextFreeGrammar
 variable {g : ContextFreeGrammar T} {u v : List (Symbol T g.NT)} {w : List T}
 
 /-- Grammar for a reversed language. -/
-@[simps] def reverse (g : ContextFreeGrammar T) : ContextFreeGrammar T :=
+@[target, simps] def reverse (g : ContextFreeGrammar T) : ContextFreeGrammar T :=
   ⟨g.NT, g.initial, g.rules.map (⟨ContextFreeRule.reverse, ContextFreeRule.reverse_injective⟩)⟩
 
 @[simp] lemma reverse_reverse (g : ContextFreeGrammar T) : g.reverse.reverse = g := by
@@ -245,13 +248,15 @@ lemma reverse_injective : Injective (reverse : ContextFreeGrammar T → ContextF
 @[target]
 lemma reverse_surjective : Surjective (reverse : ContextFreeGrammar T → ContextFreeGrammar T) := by sorry
 
+@[target]
+
 lemma produces_reverse : g.reverse.Produces u.reverse v.reverse ↔ g.Produces u v :=
   (Equiv.ofBijective _ ContextFreeRule.reverse_bijective).exists_congr
     (by simp [ContextFreeRule.reverse_involutive.eq_iff])
 
 alias ⟨_, Produces.reverse⟩ := produces_reverse
 
-@[simp] lemma produces_reverse_comm : g.reverse.Produces u v ↔ g.Produces u.reverse v.reverse :=
+@[target, simp] lemma produces_reverse_comm : g.reverse.Produces u v ↔ g.Produces u.reverse v.reverse :=
   (Equiv.ofBijective _ ContextFreeRule.reverse_bijective).exists_congr
     (by simp [ContextFreeRule.reverse_involutive.eq_iff])
 
@@ -263,17 +268,19 @@ protected lemma Derives.reverse (hg : g.Derives u v) : g.reverse.Derives u.rever
 @[target]
 lemma derives_reverse : g.reverse.Derives u.reverse v.reverse ↔ g.Derives u v := by sorry
 
-@[simp] lemma derives_reverse_comm : g.reverse.Derives u v ↔ g.Derives u.reverse v.reverse := by
+@[target, simp] lemma derives_reverse_comm : g.reverse.Derives u v ↔ g.Derives u.reverse v.reverse := by
   rw [iff_comm, ← derives_reverse, List.reverse_reverse, List.reverse_reverse]
+
+@[target]
 
 lemma generates_reverse : g.reverse.Generates u.reverse ↔ g.Generates u := by simp [Generates]
 
 alias ⟨_, Generates.reverse⟩ := generates_reverse
 
-@[simp] lemma generates_reverse_comm : g.reverse.Generates u ↔ g.Generates u.reverse := by
+@[target, simp] lemma generates_reverse_comm : g.reverse.Generates u ↔ g.Generates u.reverse := by
   simp [Generates]
 
-@[simp] lemma language_reverse : g.reverse.language = g.language.reverse := by ext; simp
+@[target, simp] lemma language_reverse : g.reverse.language = g.language.reverse := by ext; simp
 
 end ContextFreeGrammar
 

@@ -269,17 +269,18 @@ theorem manyOneEquiv_toNat (p : Set α) (q : Set β) :
     ManyOneEquiv (toNat p) (toNat q) ↔ ManyOneEquiv p q := by sorry
 
 /-- A many-one degree is an equivalence class of sets up to many-one equivalence. -/
+@[target]
 def ManyOneDegree : Type :=
   Quotient (⟨ManyOneEquiv, equivalence_of_manyOneEquiv⟩ : Setoid (Set ℕ))
 
 namespace ManyOneDegree
 
 /-- The many-one degree of a set on a primcodable type. -/
+@[target]
 def of (p : α → Prop) : ManyOneDegree :=
   Quotient.mk'' (toNat p)
 
-@[elab_as_elim]
-protected theorem ind_on {C : ManyOneDegree → Prop} (d : ManyOneDegree)
+@[target, elab_as_elim] protected theorem ind_on {C : ManyOneDegree → Prop} (d : ManyOneDegree)
     (h : ∀ p : Set ℕ, C (of p)) : C d :=
   Quotient.inductionOn' d h
 
@@ -288,14 +289,12 @@ protected abbrev liftOn {φ} (d : ManyOneDegree) (f : Set ℕ → φ)
     (h : ∀ p q, ManyOneEquiv p q → f p = f q) : φ :=
   Quotient.liftOn' d f h
 
-@[simp]
-protected theorem liftOn_eq {φ} (p : Set ℕ) (f : Set ℕ → φ)
+@[target, simp] protected theorem liftOn_eq {φ} (p : Set ℕ) (f : Set ℕ → φ)
     (h : ∀ p q, ManyOneEquiv p q → f p = f q) : (of p).liftOn f h = f p :=
   rfl
 
 /-- Lifts a binary function on sets of natural numbers to many-one degrees. -/
-@[reducible, simp]
-protected def liftOn₂ {φ} (d₁ d₂ : ManyOneDegree) (f : Set ℕ → Set ℕ → φ)
+@[target, reducible, simp] protected def liftOn₂ {φ} (d₁ d₂ : ManyOneDegree) (f : Set ℕ → Set ℕ → φ)
     (h : ∀ p₁ p₂ q₁ q₂, ManyOneEquiv p₁ p₂ → ManyOneEquiv q₁ q₂ → f p₁ q₁ = f p₂ q₂) : φ :=
   d₁.liftOn (fun p => d₂.liftOn (f p) fun _ _ hq => h _ _ _ _ (by rfl) hq)
     (by
@@ -305,8 +304,7 @@ protected def liftOn₂ {φ} (d₁ d₂ : ManyOneDegree) (f : Set ℕ → Set �
       · assumption
       · rfl)
 
-@[simp]
-protected theorem liftOn₂_eq {φ} (p q : Set ℕ) (f : Set ℕ → Set ℕ → φ)
+@[target, simp] protected theorem liftOn₂_eq {φ} (p q : Set ℕ) (f : Set ℕ → Set ℕ → φ)
     (h : ∀ p₁ p₂ q₁ q₂, ManyOneEquiv p₁ p₂ → ManyOneEquiv q₁ q₂ → f p₁ q₁ = f p₂ q₂) :
     (of p).liftOn₂ (of q) f h = f p q :=
   rfl
@@ -365,19 +363,16 @@ instance instAdd : Add ManyOneDegree :=
 @[target, simp]
 theorem add_of (p : Set α) (q : Set β) : of (p ⊕' q) = of p + of q := by sorry
 
-@[simp]
-protected theorem add_le {d₁ d₂ d₃ : ManyOneDegree} : d₁ + d₂ ≤ d₃ ↔ d₁ ≤ d₃ ∧ d₂ ≤ d₃ := by
+@[target, simp] protected theorem add_le {d₁ d₂ d₃ : ManyOneDegree} : d₁ + d₂ ≤ d₃ ↔ d₁ ≤ d₃ ∧ d₂ ≤ d₃ := by
   induction d₁ using ManyOneDegree.ind_on
   induction d₂ using ManyOneDegree.ind_on
   induction d₃ using ManyOneDegree.ind_on
   simpa only [← add_of, of_le_of] using disjoin_le
 
-@[simp]
-protected theorem le_add_left (d₁ d₂ : ManyOneDegree) : d₁ ≤ d₁ + d₂ :=
+@[target, simp] protected theorem le_add_left (d₁ d₂ : ManyOneDegree) : d₁ ≤ d₁ + d₂ :=
   (ManyOneDegree.add_le.1 (le_refl _)).1
 
-@[simp]
-protected theorem le_add_right (d₁ d₂ : ManyOneDegree) : d₂ ≤ d₁ + d₂ :=
+@[target, simp] protected theorem le_add_right (d₁ d₂ : ManyOneDegree) : d₂ ≤ d₁ + d₂ :=
   (ManyOneDegree.add_le.1 (le_refl _)).2
 
 instance instSemilatticeSup : SemilatticeSup ManyOneDegree :=

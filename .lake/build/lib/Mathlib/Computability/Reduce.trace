@@ -138,12 +138,12 @@
    "././src/./Mathlib/Computability/Reduce.lean:268:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Reduce.lean:315:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Reduce.lean:313:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Reduce.lean:329:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Reduce.lean:327:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Reduce.lean:366:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Reduce.lean:364:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "2920040680687356037"}
+ "depHash": "14193428948718819048"}

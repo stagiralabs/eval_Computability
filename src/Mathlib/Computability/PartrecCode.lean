@@ -210,6 +210,8 @@ theorem prec_prim : Primrec₂ prec := by sorry
 @[target]
 theorem rfind_prim : Primrec rfind' := by sorry
 
+@[target]
+
 theorem rec_prim' {α σ} [Primcodable α] [Primcodable σ] {c : α → Code} (hc : Primrec c) {z : α → σ}
     (hz : Primrec z) {s : α → σ} (hs : Primrec s) {l : α → σ} (hl : Primrec l) {r : α → σ}
     (hr : Primrec r) {pr : α → Code × Code × σ × σ → σ} (hpr : Primrec₂ pr)
@@ -408,6 +410,7 @@ theorem smn :
 
 /-- A function is partial recursive if and only if there is a code implementing it. Therefore,
 `eval` is a **universal partial recursive function**. -/
+@[target]
 theorem exists_code {f : ℕ →. ℕ} : Nat.Partrec f ↔ ∃ c : Code, eval c = f := by
   refine ⟨fun h => ?_, ?_⟩
   · induction h with

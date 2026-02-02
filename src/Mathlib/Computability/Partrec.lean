@@ -133,6 +133,8 @@ theorem of_eq_tot {f : ℕ →. ℕ} {g : ℕ → ℕ} (hf : Partrec f) (H : ∀
 @[target]
 theorem of_primrec {f : ℕ → ℕ} (hf : Nat.Primrec f) : Partrec f := by sorry
 
+@[target]
+
 protected theorem some : Partrec some :=
   of_primrec Primrec.id
 
@@ -197,6 +199,8 @@ theorem ofOption {f : α → Option β} (hf : Computable f) : Partrec fun a => (
 @[target]
 theorem to₂ {f : α × β → σ} (hf : Computable f) : Computable₂ fun a b => f (a, b) := by sorry
 
+@[target]
+
 protected theorem id : Computable (@id α) :=
   Primrec.id.to_comp
 
@@ -224,11 +228,15 @@ theorem nat_div2 : Computable Nat.div2 := by sorry
 @[target]
 theorem sumInl : Computable (@Sum.inl α β) := by sorry
 
+@[target]
+
 theorem sumInr : Computable (@Sum.inr α β) :=
   Primrec.sumInr.to_comp
 
 @[deprecated (since := "2025-02-21")] alias sum_inl := Computable.sumInl
 @[deprecated (since := "2025-02-21")] alias sum_inr := Computable.sumInr
+
+@[target]
 
 theorem list_cons : Computable₂ (@List.cons α) :=
   Primrec.list_cons.to_comp
@@ -272,11 +280,17 @@ theorem vector_ofFn' {n} : Computable (@List.Vector.ofFn α n) := by sorry
 @[target]
 theorem fin_app {n} : Computable₂ (@id (Fin n → σ)) := by sorry
 
+@[target]
+
 protected theorem encode : Computable (@encode α _) :=
   Primrec.encode.to_comp
 
+@[target]
+
 protected theorem decode : Computable (decode (α := α)) :=
   Primrec.decode.to_comp
+
+@[target]
 
 protected theorem ofNat (α) [Denumerable α] : Computable (ofNat α) :=
   (Primrec.ofNat _).to_comp
@@ -312,6 +326,8 @@ theorem _root_.Decidable.Partrec.const' (s : Part σ) [Decidable s.Dom] : Partre
 
 @[target]
 theorem const' (s : Part σ) : Partrec fun _ : α => s := by sorry
+
+@[target]
 
 protected theorem bind {f : α →. β} {g : α → β →. σ} (hf : Partrec f) (hg : Partrec₂ g) :
     Partrec fun a => (f a).bind (g a) :=
@@ -506,6 +522,8 @@ theorem optionCasesOn_right {o : α → Option β} {f : α → σ} {g : α → �
     @Partrec _ σ _ _ fun a => Option.casesOn (o a) (Part.some (f a)) (g a) := by sorry
 
 @[deprecated (since := "2025-02-21")] alias option_casesOn_right := optionCasesOn_right
+
+@[target]
 
 theorem sumCasesOn_right {f : α → β ⊕ γ} {g : α → β → σ} {h : α → γ →. σ} (hf : Computable f)
     (hg : Computable₂ g) (hh : Partrec₂ h) :

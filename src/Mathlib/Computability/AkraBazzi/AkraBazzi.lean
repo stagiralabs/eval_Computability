@@ -163,6 +163,8 @@ lemma bi_min_div_two_pos : 0 < b (min_bi b) / 2 := by sorry
 lemma exists_eventually_const_mul_le_r :
     ∃ c ∈ Set.Ioo (0 : ℝ) 1, ∀ᶠ (n : ℕ) in atTop, ∀ i, c * n ≤ r i n := by sorry
 
+@[target]
+
 lemma eventually_r_ge (C : ℝ) : ∀ᶠ (n : ℕ) in atTop, ∀ i, C ≤ r i n := by
   obtain ⟨c, hc_mem, hc⟩ := R.exists_eventually_const_mul_le_r
   filter_upwards [eventually_ge_atTop ⌈C / c⌉₊, hc] with n hn₁ hn₂
@@ -234,8 +236,12 @@ lemma one_add_smoothingFn_le_two {x : ℝ} (hx : exp 1 ≤ x) : 1 + ε x ≤ 2 :
 @[target]
 lemma isLittleO_smoothingFn_one : ε =o[atTop] (fun _ => (1 : ℝ)) := by sorry
 
+@[target]
+
 lemma isEquivalent_one_add_smoothingFn_one : (fun x => 1 + ε x) ~[atTop] (fun _ => (1 : ℝ)) :=
   IsEquivalent.add_isLittleO IsEquivalent.refl isLittleO_smoothingFn_one
+
+@[target]
 
 lemma isEquivalent_one_sub_smoothingFn_one : (fun x => 1 - ε x) ~[atTop] (fun _ => (1 : ℝ)) :=
   IsEquivalent.sub_isLittleO IsEquivalent.refl isLittleO_smoothingFn_one
@@ -312,6 +318,8 @@ lemma eventually_one_add_smoothingFn_pos : ∀ᶠ (n : ℕ) in atTop, 0 < 1 + ε
 
 @[target]
 lemma eventually_one_add_smoothingFn_r_pos : ∀ᶠ (n : ℕ) in atTop, ∀ i, 0 < 1 + ε (r i n) := by sorry
+
+@[target]
 
 lemma eventually_one_add_smoothingFn_nonneg : ∀ᶠ (n : ℕ) in atTop, 0 ≤ 1 + ε n := by
   filter_upwards [eventually_one_add_smoothingFn_pos] with n hn; exact le_of_lt hn
@@ -460,6 +468,8 @@ The next several lemmas are technical lemmas leading up to `rpow_p_mul_one_sub_s
 `rpow_p_mul_one_add_smoothingFn_ge`, which are key steps in the main proof.
 -/
 
+@[target]
+
 lemma eventually_deriv_rpow_p_mul_one_sub_smoothingFn (p : ℝ) :
     deriv (fun z => z ^ p * (1 - ε z))
       =ᶠ[atTop] fun z => p * z ^ (p-1) * (1 - ε z) + z ^ (p-1) / (log z ^ 2) := calc
@@ -490,6 +500,8 @@ lemma isEquivalent_deriv_rpow_p_mul_one_sub_smoothingFn {p : ℝ} (hp : p ≠ 0)
 lemma isEquivalent_deriv_rpow_p_mul_one_add_smoothingFn {p : ℝ} (hp : p ≠ 0) :
     deriv (fun z => z ^ p * (1 + ε z)) ~[atTop] fun z => p * z ^ (p-1) := by sorry
 
+@[target]
+
 lemma isTheta_deriv_rpow_p_mul_one_sub_smoothingFn {p : ℝ} (hp : p ≠ 0) :
     (fun x => ‖deriv (fun z => z ^ p * (1 - ε z)) x‖) =Θ[atTop] fun z => z ^ (p-1) := by
   refine IsTheta.norm_left ?_
@@ -497,6 +509,8 @@ lemma isTheta_deriv_rpow_p_mul_one_sub_smoothingFn {p : ℝ} (hp : p ≠ 0) :
             (isEquivalent_deriv_rpow_p_mul_one_sub_smoothingFn hp).isTheta
     _ =Θ[atTop] fun z => z ^ (p-1) :=
             IsTheta.const_mul_left hp <| isTheta_refl _ _
+
+@[target]
 
 lemma isTheta_deriv_rpow_p_mul_one_add_smoothingFn {p : ℝ} (hp : p ≠ 0) :
     (fun x => ‖deriv (fun z => z ^ p * (1 + ε z)) x‖) =Θ[atTop] fun z => z ^ (p-1) := by

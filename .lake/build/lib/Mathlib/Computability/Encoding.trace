@@ -9,12 +9,12 @@
    "././src/./Mathlib/Computability/Encoding.lean:74:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Encoding.lean:111:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Encoding.lean:113:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Encoding.lean:201:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Encoding.lean:205:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Encoding.lean:210:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Encoding.lean:214:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "525562473533426976"}
+ "depHash": "2189805116994806702"}

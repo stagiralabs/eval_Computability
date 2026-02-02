@@ -176,6 +176,8 @@ theorem add_rmatch_iff (P Q : RegularExpression α) (x : List α) :
 theorem mul_rmatch_iff (P Q : RegularExpression α) (x : List α) :
     (P * Q).rmatch x ↔ ∃ t u : List α, x = t ++ u ∧ P.rmatch t ∧ Q.rmatch u := by sorry
 
+@[target]
+
 theorem star_rmatch_iff (P : RegularExpression α) :
     ∀ x : List α, (star P).rmatch x ↔ ∃ S : List (List α), x
           = S.flatten ∧ ∀ t ∈ S, t ≠ [] ∧ P.rmatch t :=
@@ -259,8 +261,7 @@ theorem map_id : ∀ P : RegularExpression α, P.map id = P := by sorry
 theorem map_map (g : β → γ) (f : α → β) : ∀ P : RegularExpression α, (P.map f).map g = P.map (g ∘ f) := by sorry
 
 /-- The language of the map is the map of the language. -/
-@[simp]
-theorem matches'_map (f : α → β) :
+@[target, simp] theorem matches'_map (f : α → β) :
     ∀ P : RegularExpression α, (P.map f).matches' = Language.map f P.matches'
   | 0 => (map_zero _).symm
   | 1 => (map_one _).symm

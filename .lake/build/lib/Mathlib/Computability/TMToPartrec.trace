@@ -75,72 +75,72 @@
    "././src/./Mathlib/Computability/TMToPartrec.lean:574:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:591:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:593:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:594:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:596:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:609:8: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:614:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:615:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/TMToPartrec.lean:620:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:625:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:626:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/TMToPartrec.lean:631:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:731:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:637:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:734:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:745:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:761:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:748:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:785:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:775:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:788:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:799:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:795:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:802:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:798:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:809:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:811:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:812:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:822:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:824:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:840:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:835:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:843:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:853:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:868:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:856:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:874:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:881:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:877:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:887:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:925:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:890:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMToPartrec.lean:1009:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMToPartrec.lean:940:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/TMToPartrec.lean:1032:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "7331170041417475401"}
+ "depHash": "17409394580142623762"}

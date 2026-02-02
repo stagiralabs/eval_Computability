@@ -18,13 +18,13 @@
    "././src/./Mathlib/Computability/MyhillNerode.lean:54:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/MyhillNerode.lean:69:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/MyhillNerode.lean:70:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/MyhillNerode.lean:72:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/MyhillNerode.lean:73:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/MyhillNerode.lean:77:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/MyhillNerode.lean:78:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/MyhillNerode.lean:90:8: declaration uses 'sorry'",
@@ -32,4 +32,4 @@
   {"message":
    "././src/./Mathlib/Computability/MyhillNerode.lean:97:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "11731467349991304061"}
+ "depHash": "13172881662557778711"}

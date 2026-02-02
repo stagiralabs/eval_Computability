@@ -12,40 +12,37 @@
    "././src/./Mathlib/Computability/ContextFreeGrammar.lean:71:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:84:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:85:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:89:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:90:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:122:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:123:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:132:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:133:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:140:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:141:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:150:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:151:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:154:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:155:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:165:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:166:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:179:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:180:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:203:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:204:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:209:6: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:240:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:210:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/ContextFreeGrammar.lean:243:6: declaration uses 'sorry'",
@@ -54,9 +51,12 @@
    "././src/./Mathlib/Computability/ContextFreeGrammar.lean:246:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:264:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:249:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:282:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:269:6: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/ContextFreeGrammar.lean:289:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "9811715631036869612"}
+ "depHash": "10601483406984453256"}

@@ -56,6 +56,7 @@ theorem IsRegular.finite_range_leftQuotient (h : L.IsRegular) :
 
 variable (L) in
 /-- The left quotients of a language are the states of an automaton that accepts the language. -/
+@[target]
 def toDFA : DFA α (Set.range L.leftQuotient) where
   step s a := by
     refine ⟨s.val.leftQuotient [a], ?_⟩
@@ -77,8 +78,7 @@ variable (L) in
 theorem start_toDFA : L.toDFA.start.val = L := by sorry
 
 variable (L) in
-@[simp]
-theorem accepts_toDFA : L.toDFA.accepts = L := by
+@[target, simp] theorem accepts_toDFA : L.toDFA.accepts = L := by
   ext x
   rw [DFA.mem_accepts]
   suffices L.toDFA.eval x = L.leftQuotient x by simp [this]

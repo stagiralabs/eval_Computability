@@ -18,30 +18,30 @@
    "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:232:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:272:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:276:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:275:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:279:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:332:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:336:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:376:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:380:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:498:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:502:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:501:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:505:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:536:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:542:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:540:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:546:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:544:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/GrowsPolynomially.lean:550:6: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "2916001768766186821"}
+ "depHash": "7310406640718273763"}

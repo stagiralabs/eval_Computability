@@ -59,6 +59,8 @@ theorem of_eq {f g : ℕ → ℕ} (hf : Nat.Primrec f) (H : ∀ n, f n = g n) : 
 @[target]
 theorem const : ∀ n : ℕ, Nat.Primrec fun _ => n := by sorry
 
+@[target]
+
 protected theorem id : Nat.Primrec id :=
   (left.pair right).of_eq fun n => by simp
 
@@ -113,6 +115,7 @@ instance (priority := 10) ofDenumerable (α) [Denumerable α] : Primcodable α :
   ⟨Nat.Primrec.succ.of_eq <| by simp⟩
 
 /-- Builds a `Primcodable` instance from an equivalence to a `Primcodable` type. -/
+@[target]
 def ofEquiv (α) {β} [Primcodable α] (e : β ≃ α) : Primcodable β :=
   { __ := Encodable.ofEquiv α e
     prim := (@Primcodable.prim α _).of_eq fun n => by
@@ -154,8 +157,12 @@ variable [Primcodable α] [Primcodable β] [Primcodable σ]
 
 open Nat.Primrec
 
+@[target]
+
 protected theorem encode : Primrec (@encode α _) :=
   (@Primcodable.prim α _).of_eq fun n => by cases @decode α _ n <;> rfl
+
+@[target]
 
 protected theorem decode : Primrec (@decode α _) :=
   Nat.Primrec.succ.comp (@Primcodable.prim α _)
@@ -197,6 +204,8 @@ theorem encode_iff {f : α → σ} : (Primrec fun a => encode (f a)) ↔ Primrec
 @[target]
 theorem ofNat_iff {α β} [Denumerable α] [Primcodable β] {f : α → β} :
     Primrec f ↔ Primrec fun n => f (ofNat α n) := by sorry
+
+@[target]
 
 protected theorem ofNat (α) [Denumerable α] : Primrec (ofNat α) :=
   ofNat_iff.1 Primrec.id
@@ -488,11 +497,15 @@ theorem ite {c : α → Prop} [DecidablePred c] {f : α → σ} {g : α → σ} 
 @[target]
 theorem nat_le : PrimrecRel ((· ≤ ·) : ℕ → ℕ → Prop) := by sorry
 
+@[target]
+
 theorem nat_min : Primrec₂ (@min ℕ _) :=
   ite nat_le fst snd
 
 @[target]
 theorem nat_max : Primrec₂ (@max ℕ _) := by sorry
+
+@[target]
 
 theorem dom_bool (f : Bool → α) : Primrec f :=
   (cond .id (const (f true)) (const (f false))).of_eq fun b => by cases b <;> rfl
@@ -500,11 +513,17 @@ theorem dom_bool (f : Bool → α) : Primrec f :=
 @[target]
 theorem dom_bool₂ (f : Bool → Bool → α) : Primrec₂ f := by sorry
 
+@[target]
+
 protected theorem not : Primrec not :=
   dom_bool _
 
+@[target]
+
 protected theorem and : Primrec₂ and :=
   dom_bool₂ _
+
+@[target]
 
 protected theorem or : Primrec₂ or :=
   dom_bool₂ _
@@ -521,11 +540,15 @@ theorem _root_.PrimrecPred.and {p q : α → Prop} [DecidablePred p] [DecidableP
 theorem _root_.PrimrecPred.or {p q : α → Prop} [DecidablePred p] [DecidablePred q]
     (hp : PrimrecPred p) (hq : PrimrecPred q) : PrimrecPred fun a => p a ∨ q a := by sorry
 
+@[target]
+
 protected theorem beq [DecidableEq α] : Primrec₂ (@BEq.beq α _) :=
   have : PrimrecRel fun a b : ℕ => a = b :=
     (PrimrecPred.and nat_le nat_le.swap).of_eq fun a => by simp [le_antisymm_iff]
   (this.comp₂ (Primrec.encode.comp₂ Primrec₂.left) (Primrec.encode.comp₂ Primrec₂.right)).of_eq
     fun _ _ => encode_injective.eq_iff
+
+@[target]
 
 protected theorem eq [DecidableEq α] : PrimrecRel (@Eq α) := Primrec.beq
 
@@ -538,6 +561,8 @@ theorem option_guard {p : α → β → Prop} [∀ a b, Decidable (p a b)] (hp :
 
 @[target]
 theorem option_orElse : Primrec₂ ((· <|> ·) : Option α → Option α → Option α) := by sorry
+
+@[target]
 
 protected theorem decode₂ : Primrec (decode₂ α) :=
   option_bind .decode <|
@@ -552,6 +577,8 @@ theorem list_idxOf₁ [DecidableEq α] (l : List α) : Primrec fun a => l.idxOf 
 
 @[deprecated (since := "2025-01-30")] alias list_indexOf₁ := list_idxOf₁
 
+@[target]
+
 theorem dom_fintype [Finite α] (f : α → σ) : Primrec f :=
   let ⟨l, _, m⟩ := Finite.exists_univ_list α
   option_some_iff.1 <| by
@@ -563,6 +590,7 @@ theorem dom_fintype [Finite α] (f : α → σ) : Primrec f :=
 -- I added it because it actually simplified the proofs
 -- and because I couldn't understand the original proof
 /-- A function is `PrimrecBounded` if its size is bounded by a primitive recursive function -/
+@[target]
 def PrimrecBounded (f : α → β) : Prop :=
   ∃ g : α → ℕ, Primrec g ∧ ∀ x, encode (f x) ≤ g x
 
@@ -725,6 +753,8 @@ theorem sumInr : Primrec (@Sum.inr α β) := by sorry
 @[deprecated (since := "2025-02-21")] alias sum_inl := Primrec.sumInl
 @[deprecated (since := "2025-02-21")] alias sum_inr := Primrec.sumInr
 
+@[target]
+
 theorem sumCasesOn {f : α → β ⊕ γ} {g : α → β → σ} {h : α → γ → σ} (hf : Primrec f)
     (hg : Primrec₂ g) (hh : Primrec₂ h) : @Primrec _ σ _ _ fun a => Sum.casesOn (f a) (g a) (h a) :=
   option_some_iff.1 <|
@@ -734,6 +764,8 @@ theorem sumCasesOn {f : α → β ⊕ γ} {g : α → β → σ} {h : α → γ 
       fun a => by rcases f a with b | c <;> simp [Nat.div2_val, encodek]
 
 @[deprecated (since := "2025-02-21")] alias sum_casesOn := Primrec.sumCasesOn
+
+@[target]
 
 theorem list_cons : Primrec₂ (@List.cons α) :=
   list_cons' Primcodable.prim
@@ -777,6 +809,8 @@ theorem list_get? : Primrec₂ (@List.get? α) := by sorry
 @[target]
 theorem list_getElem? : Primrec₂ (fun (l : List α) (n : ℕ) => l[n]?) := by sorry
 
+@[target]
+
 theorem list_getD (d : α) : Primrec₂ fun l n => List.getD l n d := by
   simp only [List.getD_eq_getElem?_getD]
   exact option_getD.comp₂ list_getElem? (const _)
@@ -802,10 +836,14 @@ theorem list_flatten : Primrec (@List.flatten α) := by sorry
 
 @[deprecated (since := "2024-10-15")] alias list_join := list_flatten
 
+@[target]
+
 theorem list_flatMap {f : α → List β} {g : α → β → List σ} (hf : Primrec f) (hg : Primrec₂ g) :
     Primrec (fun a => (f a).flatMap (g a)) := list_flatten.comp (list_map hf hg)
 
 @[deprecated (since := "2024-10-16")] alias list_bind := list_flatMap
+
+@[target]
 
 theorem optionToList : Primrec (Option.toList : Option α → List α) :=
   (option_casesOn Primrec.id (const [])
@@ -827,6 +865,8 @@ theorem list_findIdx {f : α → List β} {p : α → β → Bool}
 theorem list_idxOf [DecidableEq α] : Primrec₂ (@List.idxOf α _) := by sorry
 
 @[deprecated (since := "2025-01-30")] alias list_indexOf := list_idxOf
+
+@[target]
 
 theorem nat_strong_rec (f : α → ℕ → σ) {g : α → List σ → Option σ} (hg : Primrec₂ g)
     (H : ∀ a n, g a ((List.range n).map (f a)) = some (f a n)) : Primrec₂ f :=
@@ -871,6 +911,7 @@ variable {α : Type*} [Primcodable α]
 open Primrec
 
 /-- A subtype of a primitive recursive predicate is `Primcodable`. -/
+@[target]
 def subtype {p : α → Prop} [DecidablePred p] (hp : PrimrecPred p) : Primcodable (Subtype p) :=
   ⟨have : Primrec fun n => (@decode α _ n).bind fun a => Option.guard p a :=
     option_bind .decode (option_guard (hp.comp snd).to₂ snd)

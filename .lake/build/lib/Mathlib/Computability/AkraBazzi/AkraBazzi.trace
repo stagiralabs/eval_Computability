@@ -30,46 +30,40 @@
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:163:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:179:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:181:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:182:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:184:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:185:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:187:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:189:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:191:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:192:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:194:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:206:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:208:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:232:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:234:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:235:6: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:244:6: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:247:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:237:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:250:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:254:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:253:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:258:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:256:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:261:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:260:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:264:6: declaration uses 'sorry'",
@@ -84,117 +78,123 @@
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:273:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:277:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:276:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:280:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:279:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:284:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:283:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:292:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:286:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:295:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:290:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:299:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:298:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:303:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:301:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:307:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:305:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:311:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:309:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:314:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:313:6: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:317:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:320:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:323:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:328:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:327:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:331:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:333:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:335:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:337:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:341:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:398:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:345:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:416:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:406:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:425:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:424:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:431:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:433:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:438:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:439:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:441:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:446:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:444:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:449:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:447:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:452:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:451:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:455:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:481:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:459:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:486:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:491:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:490:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:496:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:510:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:500:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:514:6: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:518:6: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:523:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:524:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:528:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:539:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:532:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:545:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:537:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:552:6: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:542:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:557:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:553:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:561:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:559:6: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:565:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:566:6: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:571:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:575:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/AkraBazzi/AkraBazzi.lean:579:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "13988369181937335898"}
+ "depHash": "5443563030877670245"}

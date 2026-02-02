@@ -36,18 +36,18 @@
    "././src/./Mathlib/Computability/TuringMachine.lean:404:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TuringMachine.lean:618:8: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/TuringMachine.lean:653:8: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/TuringMachine.lean:657:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TuringMachine.lean:624:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/TuringMachine.lean:661:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TuringMachine.lean:680:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TuringMachine.lean:665:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/TuringMachine.lean:669:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/TuringMachine.lean:688:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "12550590244186186062"}
+ "depHash": "7481445701076733326"}

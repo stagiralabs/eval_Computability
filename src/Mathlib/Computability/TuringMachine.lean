@@ -486,6 +486,8 @@ open scoped Classical in
     trStmts₁ (stRun s q) = {go k s q, ret q} ∪ trStmts₁ q := by
   cases s <;> simp only [trStmts₁, stRun]
 
+@[target]
+
 theorem tr_respects_aux₂ [DecidableEq K] {k : K} {q : TM1.Stmt (Γ' K Γ) (Λ' K Γ Λ σ) σ} {v : σ}
     {S : ∀ k, List (Γ k)} {L : ListBlank (∀ k, Option (Γ k))}
     (hL : ∀ k, L.map (proj k) = ListBlank.mk ((S k).map some).reverse) (o : StAct K Γ σ k) :
@@ -591,6 +593,8 @@ inductive TrCfg : TM2.Cfg Γ Λ σ → TM1.Cfg (Γ' K Γ) (Λ' K Γ Λ σ) σ �
     (∀ k, L.map (proj k) = ListBlank.mk ((S k).map some).reverse) →
       TrCfg ⟨q, v, S⟩ ⟨q.map normal, v, Tape.mk' ∅ (addBottom L)⟩
 
+@[target]
+
 theorem tr_respects_aux₁ {k} (o q v) {S : List (Γ k)} {L : ListBlank (∀ k, Option (Γ k))}
     (hL : L.map (proj k) = ListBlank.mk (S.map some).reverse) (n) (H : n ≤ S.length) :
     Reaches₀ (TM1.step (tr M)) ⟨some (go k o q), v, Tape.mk' ∅ (addBottom L)⟩
@@ -603,6 +607,8 @@ theorem tr_respects_aux₁ {k} (o q v) {S : List (Γ k)} {L : ListBlank (∀ k, 
   rw [stk_nth_val _ hL, List.getElem?_eq_getElem]
   · rfl
   · rwa [List.length_reverse]
+
+@[target]
 
 theorem tr_respects_aux₃ {q v} {L : ListBlank (∀ k, Option (Γ k))} (n) : Reaches₀ (TM1.step (tr M))
     ⟨some (ret q), v, (Tape.move Dir.right)^[n] (Tape.mk' ∅ (addBottom L))⟩
@@ -626,6 +632,8 @@ theorem tr_respects_aux {q v T k} {S : ∀ k, List (Γ k)}
       (TM1.stepAux (trNormal (stRun o q)) v (Tape.mk' ∅ (addBottom T))) b := by sorry
 
 attribute [local simp] Respects TM2.step TM2.stepAux trNormal
+
+@[target]
 
 theorem tr_respects : Respects (TM2.step M) (TM1.step (tr M)) TrCfg := by
   -- Porting note (https://github.com/leanprover-community/mathlib4/issues/12129): additional beta reduction needed

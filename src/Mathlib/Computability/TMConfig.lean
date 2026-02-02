@@ -160,8 +160,7 @@ theorem nil_eval (v) : nil.eval v = pure [] := by sorry
 def id : Code :=
   tail.comp zero'
 
-@[simp]
-theorem id_eval (v) : id.eval v = pure v := by simp [id]
+@[target, simp] theorem id_eval (v) : id.eval v = pure v := by simp [id]
 
 /-- `head` gets the head of the input list: `head [] = [0]`, `head (n :: v) = [n]`. -/
 def head : Code :=
@@ -174,16 +173,14 @@ theorem head_eval (v) : head.eval v = pure [v.headI] := by sorry
 def zero : Code :=
   cons zero' nil
 
-@[simp]
-theorem zero_eval (v) : zero.eval v = pure [0] := by simp [zero]
+@[target, simp] theorem zero_eval (v) : zero.eval v = pure [0] := by simp [zero]
 
 /-- `pred` returns the predecessor of the head of the input:
 `pred [] = [0]`, `pred (0 :: v) = [0]`, `pred (n+1 :: v) = [n]`. -/
 def pred : Code :=
   case zero head
 
-@[simp]
-theorem pred_eval (v) : pred.eval v = pure [v.headI.pred] := by
+@[target, simp] theorem pred_eval (v) : pred.eval v = pure [v.headI.pred] := by
   simp [pred]; cases v.headI <;> simp
 
 /-- `rfind f` performs the function of the `rfind` primitive of partial recursive functions.
@@ -422,6 +419,7 @@ theorem stepNormal_then (c) (k k' : Cont) (v) :
 /-- The `stepRet` function respects the `then k'` homomorphism. Note that this is an exact
 equality, not a simulation; the original and embedded machines move in lock-step until the
 embedded machine reaches the halt state. -/
+@[target]
 theorem stepRet_then {k k' : Cont} {v} : stepRet (k.then k') v = (stepRet k v).then k' := by
   induction k generalizing v with simp only [Cont.then, stepRet, *]
   | cons₁ =>
@@ -453,6 +451,8 @@ theorem Code.Ok.zero {c} (h : Code.Ok c) {v} :
 
 @[target]
 theorem stepNormal.is_ret (c k v) : ∃ k' v', stepNormal c k v = Cfg.ret k' v' := by sorry
+
+@[target]
 
 theorem cont_eval_fix {f k v} (fok : Code.Ok f) :
     Turing.eval step (stepNormal f (Cont.fix f k) v) =

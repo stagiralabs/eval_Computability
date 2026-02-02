@@ -574,6 +574,8 @@ theorem move₂_ok {p k₁ k₂ q s L₁ o L₂} {S : K' → List Γ'} (h₁ : k
 theorem clear_ok {p k q s L₁ o L₂} {S : K' → List Γ'} (e : splitAtPred p (S k) = (L₁, o, L₂)) :
     Reaches₁ (TM2.step tr) ⟨some (Λ'.clear p k q), s, S⟩ ⟨some q, o, update S k L₂⟩ := by sorry
 
+@[target]
+
 theorem copy_ok (q s a b c d) :
     Reaches₁ (TM2.step tr) ⟨some (Λ'.copy q), s, K'.elim a b c d⟩
       ⟨some q, none, K'.elim (List.reverseAux b a) [] c (List.reverseAux b d)⟩ := by
@@ -593,8 +595,12 @@ theorem trPosNum_natEnd : ∀ (n), ∀ x ∈ trPosNum n, natEnd x = false := by 
 @[target]
 theorem trNum_natEnd : ∀ (n), ∀ x ∈ trNum n, natEnd x = false := by sorry
 
+@[target]
+
 theorem trNat_natEnd (n) : ∀ x ∈ trNat n, natEnd x = false :=
   trNum_natEnd _
+
+@[target]
 
 theorem trList_ne_consₗ : ∀ (l), ∀ x ∈ trList l, x ≠ Γ'.consₗ
   | a :: l, x, h => by
@@ -633,6 +639,8 @@ theorem trNormal_respects (c k v s) :
       TrCfg (stepNormal c k v) b₂ ∧
         Reaches₁ (TM2.step tr)
           ⟨some (trNormal c (trCont k)), s, K'.elim (trList v) [] [] (trContStack k)⟩ b₂ := by sorry
+
+@[target]
 
 theorem tr_ret_respects (k v s) : ∃ b₂,
     TrCfg (stepRet k v) b₂ ∧
@@ -688,6 +696,8 @@ theorem tr_ret_respects (k v s) : ∃ b₂,
       · exact fun x h => trNat_natEnd _ _ (List.tail_subset _ h)
       · exact ⟨rfl, this.2⟩
 
+@[target]
+
 theorem tr_respects : Respects step (TM2.step tr) TrCfg
   | Cfg.ret _ _, _, ⟨_, rfl⟩ => tr_ret_respects _ _ _
   | Cfg.halt _, _, rfl => rfl
@@ -696,9 +706,13 @@ theorem tr_respects : Respects step (TM2.step tr) TrCfg
 def init (c : Code) (v : List ℕ) : Cfg' :=
   ⟨some (trNormal c Cont'.halt), none, K'.elim (trList v) [] [] []⟩
 
+@[target]
+
 theorem tr_init (c v) :
     ∃ b, TrCfg (stepNormal c Cont.halt v) b ∧ Reaches₁ (TM2.step tr) (init c v) b :=
   trNormal_respects _ _ _ _
+
+@[target]
 
 theorem tr_eval (c v) : eval (TM2.step tr) (init c v) = halt <$> Code.eval c v := by
   obtain ⟨i, h₁, h₂⟩ := tr_init c v
@@ -799,8 +813,7 @@ theorem codeSupp_cons (f fs k) :
     codeSupp (Code.cons f fs) k =
       trStmts₁ (trNormal (Code.cons f fs) k) ∪ codeSupp f (Cont'.cons₁ fs k) := by sorry
 
-@[simp]
-theorem codeSupp_comp (f g k) :
+@[target, simp] theorem codeSupp_comp (f g k) :
     codeSupp (Code.comp f g) k =
       trStmts₁ (trNormal (Code.comp f g) k) ∪ codeSupp g (Cont'.comp f k) := by
   simp only [codeSupp, codeSupp', trNormal, Finset.union_assoc, contSupp]
@@ -880,6 +893,8 @@ theorem supports_biUnion {K : Option Γ' → Finset Λ'} {S} :
 theorem head_supports {S k q} (H : (q : Λ').Supports S) : (head k q).Supports S := fun _ => by
   dsimp only; split_ifs <;> exact H
 
+@[target]
+
 theorem ret_supports {S k} (H₁ : contSupp k ⊆ S) : TM2.SupportsStmt S (tr (Λ'.ret k)) := by
   have W := fun {q} => trStmts₁_self q
   cases k with
@@ -925,6 +940,8 @@ theorem trStmts₁_supports {S q} (H₁ : (q : Λ').Supports S) (HS₁ : trStmts
 theorem trStmts₁_supports' {S q K} (H₁ : (q : Λ').Supports S) (H₂ : trStmts₁ q ∪ K ⊆ S)
     (H₃ : K ⊆ S → Supports K S) : Supports (trStmts₁ q ∪ K) S := by sorry
 
+@[target]
+
 theorem trNormal_supports {S c k} (Hk : codeSupp c k ⊆ S) : (trNormal c k).Supports S := by
   induction c generalizing k with simp [Λ'.Supports, head]
   | zero' => exact Finset.union_subset_right Hk
@@ -939,6 +956,8 @@ theorem trNormal_supports {S c k} (Hk : codeSupp c k ⊆ S) : (trNormal c k).Sup
     simp only [codeSupp_case, Finset.union_subset_iff] at Hk
     exact ⟨IHf Hk.2.1, IHg Hk.2.2⟩
   | fix f IHf => apply IHf; rw [codeSupp_fix] at Hk; exact Finset.union_subset_right Hk
+
+@[target]
 
 theorem codeSupp'_supports {S c k} (H : codeSupp c k ⊆ S) : Supports (codeSupp' c k) S := by
   induction c generalizing k with
@@ -978,6 +997,8 @@ theorem codeSupp'_supports {S c k} (H : codeSupp c k ⊆ S) : Supports (codeSupp
     exact supports_singleton.2 (ret_supports <| Finset.union_subset_right H)
   | _ => exact trStmts₁_supports (trNormal_supports H) (Finset.Subset.trans (codeSupp_self _ _) H)
 
+@[target]
+
 theorem contSupp_supports {S k} (H : contSupp k ⊆ S) : Supports (contSupp k) S := by
   induction k with
   | halt => simp [contSupp_halt, Supports]
@@ -996,6 +1017,8 @@ theorem contSupp_supports {S k} (H : contSupp k ⊆ S) : Supports (contSupp k) S
   | fix f k IH =>
     rw [contSupp] at H
     exact supports_union.2 ⟨codeSupp'_supports H, IH (Finset.union_subset_right H)⟩
+
+@[target]
 
 theorem codeSupp_supports {S c k} (H : codeSupp c k ⊆ S) : Supports (codeSupp c k) S :=
   supports_union.2 ⟨codeSupp'_supports H, contSupp_supports (Finset.union_subset_right H)⟩

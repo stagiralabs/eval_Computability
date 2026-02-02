@@ -294,6 +294,8 @@ def proj {ι : Type*} {Γ : ι → Type*} [∀ i, Inhabited (Γ i)] (i : ι) :
     PointedMap (∀ i, Γ i) (Γ i) :=
   ⟨fun a ↦ a i, rfl⟩
 
+@[target]
+
 theorem proj_map_nth {ι : Type*} {Γ : ι → Type*} [∀ i, Inhabited (Γ i)] (i : ι) (L n) :
     (ListBlank.map (@proj ι Γ _ i) L).nth n = L.nth n i := by
   rw [ListBlank.nth_map]; rfl

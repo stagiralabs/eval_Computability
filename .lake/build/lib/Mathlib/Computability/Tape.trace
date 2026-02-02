@@ -54,60 +54,60 @@
    "././src/./Mathlib/Computability/Tape.lean:289:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:341:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:343:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:348:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:350:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:399:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:401:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:407:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:409:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:410:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:412:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:413:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:415:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:416:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:418:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:419:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:421:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:425:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:427:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:429:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:431:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:462:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:464:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:466:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:468:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:481:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:483:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:491:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:493:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:504:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:506:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:508:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:510:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:513:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:515:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:517:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:519:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Tape.lean:521:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Tape.lean:523:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "15426669744658753198"}
+ "depHash": "12479161204417416537"}

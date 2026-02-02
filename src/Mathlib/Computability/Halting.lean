@@ -98,6 +98,8 @@ open Nat.Partrec.Code Computable
 theorem computable_iff {p : α → Prop} :
     ComputablePred p ↔ ∃ f : α → Bool, Computable f ∧ p = fun a => (f a : Prop) := by sorry
 
+@[target]
+
 protected theorem not {p : α → Prop} (hp : ComputablePred p) : ComputablePred fun a => ¬p a := by
   obtain ⟨f, hf, rfl⟩ := computable_iff.1 hp
   exact
@@ -112,6 +114,8 @@ with computable predicates. -/
 theorem ite {f₁ f₂ : ℕ → ℕ} (hf₁ : Computable f₁) (hf₂ : Computable f₂)
     {c : ℕ → Prop} [DecidablePred c] (hc : ComputablePred c) :
     Computable fun k ↦ if c k then f₁ k else f₂ k := by sorry
+
+@[target]
 
 theorem to_re {p : α → Prop} (hp : ComputablePred p) : REPred p := by
   obtain ⟨f, hf, rfl⟩ := computable_iff.1 hp
@@ -146,6 +150,8 @@ theorem computable_iff_re_compl_re {p : α → Prop} [DecidablePred p] :
 @[target]
 theorem computable_iff_re_compl_re' {p : α → Prop} :
     ComputablePred p ↔ REPred p ∧ REPred fun a => ¬p a := by sorry
+
+@[target]
 
 theorem halting_problem_not_re (n) : ¬REPred fun c => ¬(eval c n).Dom
   | h => halting_problem _ <| computable_iff_re_compl_re'.2 ⟨halting_problem_re _, h⟩
@@ -189,12 +195,16 @@ theorem head {n : ℕ} : @Partrec' n.succ (@head ℕ n) := by sorry
 @[target]
 theorem tail {n f} (hf : @Partrec' n f) : @Partrec' n.succ fun v => f v.tail := by sorry
 
+@[target]
+
 protected theorem bind {n f g} (hf : @Partrec' n f) (hg : @Partrec' (n + 1) g) :
     @Partrec' n fun v => (f v).bind fun a => g (a ::ᵥ v) :=
   (@comp n (n + 1) g (fun i => Fin.cases f (fun i v => some (v.get i)) i) hg fun i => by
       refine Fin.cases ?_ (fun i => ?_) i <;> simp [*]
       exact prim (Nat.Primrec'.get _)).of_eq
     fun v => by simp [mOfFn, Part.bind_assoc, pure]
+
+@[target]
 
 protected theorem map {n f} {g : List.Vector ℕ (n + 1) → ℕ} (hf : @Partrec' n f)
     (hg : @Partrec' (n + 1) g) : @Partrec' n fun v => (f v).map fun a => g (a ::ᵥ v) := by
@@ -218,6 +228,8 @@ theorem idv {n} : @Vec n n id := by sorry
 
 @[target]
 theorem comp' {n m f g} (hf : @Partrec' m f) (hg : @Vec n m g) : Partrec' fun v => f (g v) := by sorry
+
+@[target]
 
 theorem comp₁ {n} (f : ℕ →. ℕ) {g : List.Vector ℕ n → ℕ} (hf : @Partrec' 1 fun v => f v.head)
     (hg : @Partrec' n g) : @Partrec' n fun v => f (g v) := by

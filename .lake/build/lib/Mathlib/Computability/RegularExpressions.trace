@@ -66,12 +66,12 @@
    "././src/./Mathlib/Computability/RegularExpressions.lean:176:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/RegularExpressions.lean:231:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/RegularExpressions.lean:233:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/RegularExpressions.lean:256:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/RegularExpressions.lean:258:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/RegularExpressions.lean:259:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/RegularExpressions.lean:261:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "7789128339626554553"}
+ "depHash": "1422426665328567065"}

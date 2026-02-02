@@ -27,22 +27,22 @@
    "././src/./Mathlib/Computability/TMConfig.lean:157:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:171:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:170:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:259:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:256:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:406:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:403:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:419:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:416:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:451:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:449:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/TMConfig.lean:455:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/TMConfig.lean:453:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/TMConfig.lean:530:8: declaration uses 'sorry'",
@@ -53,4 +53,4 @@
   {"message":
    "././src/./Mathlib/Computability/TMConfig.lean:536:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "160568637392202551"}
+ "depHash": "15146688220737716541"}

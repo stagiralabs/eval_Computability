@@ -36,12 +36,12 @@
    "././src/./Mathlib/Computability/DFA.lean:113:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/DFA.lean:172:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/DFA.lean:169:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/DFA.lean:189:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/DFA.lean:184:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/DFA.lean:218:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/DFA.lean:213:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "15363160177363985767"}
+ "depHash": "10561408805260782459"}

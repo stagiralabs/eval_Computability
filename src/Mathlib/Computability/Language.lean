@@ -135,6 +135,7 @@ instance instSemiring : Semiring (Language α) where
 theorem add_self (l : Language α) : l + l = l := by sorry
 
 /-- Maps the alphabet of a language. -/
+@[target]
 def map (f : α → β) : Language α →+* Language β where
   toFun := image (List.map f)
   map_zero' := image_empty _
@@ -191,6 +192,8 @@ theorem iSup_add {ι : Sort v} [Nonempty ι] (l : ι → Language α) (m : Langu
 theorem add_iSup {ι : Sort v} [Nonempty ι] (l : ι → Language α) (m : Language α) :
     (m + ⨆ i, l i) = ⨆ i, m + l i := by sorry
 
+@[target]
+
 theorem mem_pow {l : Language α} {x : List α} {n : ℕ} :
     x ∈ l ^ n ↔ ∃ S : List (List α), x = S.flatten ∧ S.length = n ∧ ∀ y ∈ S, y ∈ l := by
   induction' n with n ihn generalizing x
@@ -217,8 +220,7 @@ theorem map_kstar (f : α → β) (l : Language α) : map f l∗ = (map f l)∗ 
 @[target]
 theorem mul_self_kstar_comm (l : Language α) : l∗ * l = l * l∗ := by sorry
 
-@[simp]
-theorem one_add_self_mul_kstar_eq_kstar (l : Language α) : 1 + l * l∗ = l∗ := by
+@[target, simp] theorem one_add_self_mul_kstar_eq_kstar (l : Language α) : 1 + l * l∗ = l∗ := by
   simp only [kstar_eq_iSup_pow, mul_iSup, ← pow_succ', ← pow_zero l]
   exact sup_iSup_nat_succ _
 
@@ -262,8 +264,7 @@ lemma reverse_eq_image (l : Language α) : l.reverse = List.reverse '' l := by s
 @[target, simp]
 lemma reverse_zero : (0 : Language α).reverse = 0 := by sorry
 
-@[simp]
-lemma reverse_one : (1 : Language α).reverse = 1 := by
+@[target, simp] lemma reverse_one : (1 : Language α).reverse = 1 := by
   simp [reverse, ← one_def]
 
 lemma reverse_involutive : Function.Involutive (reverse : Language α → _) :=
@@ -284,8 +285,7 @@ lemma reverse_reverse (l : Language α) : l.reverse.reverse = l := reverse_invol
 @[target, simp]
 lemma reverse_add (l m : Language α) : (l + m).reverse = l.reverse + m.reverse := by sorry
 
-@[simp]
-lemma reverse_mul (l m : Language α) : (l * m).reverse = m.reverse * l.reverse := by
+@[target, simp] lemma reverse_mul (l m : Language α) : (l * m).reverse = m.reverse * l.reverse := by
   simp only [mul_def, reverse_eq_image, image2_image_left, image2_image_right, image_image2,
     List.reverse_append]
   apply image2_swap
@@ -299,8 +299,7 @@ lemma reverse_iInf {ι : Sort*} (l : ι → Language α) : (⨅ i, l i).reverse 
 
 variable (α) in
 /-- `Language.reverse` as a ring isomorphism to the opposite ring. -/
-@[simps]
-def reverseIso : Language α ≃+* (Language α)ᵐᵒᵖ where
+@[target, simps] def reverseIso : Language α ≃+* (Language α)ᵐᵒᵖ where
   toFun l := .op l.reverse
   invFun l' := l'.unop.reverse
   left_inv := reverse_reverse

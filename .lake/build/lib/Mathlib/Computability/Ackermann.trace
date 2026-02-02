@@ -9,13 +9,10 @@
    "././src/./Mathlib/Computability/Ackermann.lean:70:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:82:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:81:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:85:8: declaration uses 'sorry'",
-   "level": "warning"},
-  {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:106:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:84:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/Ackermann.lean:109:8: declaration uses 'sorry'",
@@ -36,36 +33,39 @@
    "././src/./Mathlib/Computability/Ackermann.lean:124:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:130:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:127:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:133:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:135:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:139:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:138:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:163:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:146:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:166:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:174:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:173:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:177:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:176:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:183:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:179:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:186:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:182:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:189:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
-   "././src/./Mathlib/Computability/Ackermann.lean:210:8: declaration uses 'sorry'",
+   "././src/./Mathlib/Computability/Ackermann.lean:192:8: declaration uses 'sorry'",
    "level": "warning"},
   {"message":
    "././src/./Mathlib/Computability/Ackermann.lean:222:8: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././src/./Mathlib/Computability/Ackermann.lean:236:8: declaration uses 'sorry'",
    "level": "warning"}],
- "depHash": "1337654096628312255"}
+ "depHash": "1003734508263162151"}
